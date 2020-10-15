@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <record id="account_internal_notes_invoice_form" model="ir.ui.view">
+      <field name="name">account.internal.notes.invoice.form.view</field>
+      <field name="model">account.invoice</field>
+      <field name="inherit_id" ref="account.invoice_form" />
+      <field name="priority" eval="20" />
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='other_info']//field[@name='origin']" position="after">
+          <field name="origin_m2o" string="Source Document" attrs="{'invisible': [('origin', '=', False)]}"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
