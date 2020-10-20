@@ -15,8 +15,14 @@ class AccountInvoice(models.Model):
         compute='_compute_origin',
     )
 
+    origin_m2o_ai = fields.Many2one(
+        comodel_name='account.invoice',
+        compute='_compute_origin',
+    )
+
     @api.one
     @api.depends('origin')
     def _compute_origin(self):
-        self.origin_m2o_so = self.env['sale.order'].search([('name', '=', self.origin)], limit=1).id
-        self.origin_m2o_po = self.env['purchase.order'].search([('name', '=', self.origin)], limit=1).id
+            self.origin_m2o_so = self.env['sale.order'].search([('name', '=', self.origin)], limit=1).id
+            self.origin_m2o_po = self.env['purchase.order'].search([('name', '=', self.origin)], limit=1).id
+            self.origin_m2o_ai = self.env['account.invoice'].search([('number', '=', self.origin)], limit=1).id
