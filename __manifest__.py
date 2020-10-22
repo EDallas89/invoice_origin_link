@@ -8,8 +8,9 @@
     'website': "https://github.com/EDallas89",
     'category': 'Account',
     'version': '11.0',
-    'depends': ['sale', 'account'],
+    'depends': ['sale', 'account', 'web'],
     'data': [
         'views/account_invoice.xml',
+        'templates/assets.xml',
     ],
 }
