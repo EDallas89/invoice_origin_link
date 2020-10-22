@@ -7,10 +7,8 @@
       <field name="priority" eval="20" />
       <field name="arch" type="xml">
         <xpath expr="//page[@name='other_info']//field[@name='origin']" position="after">
-          <!--
-          <field name="origin_m2o_so" string="Quotation" attrs="{'invisible': ['|',('origin', '=', False), ('type','=','out_refund')]}"/>
-          <field name="origin_m2o_ai" string="Invoice" attrs="{'invisible': ['|',('origin', '=', False), ('type','!=','out_refund')]}"/> -->
-          <field name="origin_m2m" widget="my_many2many_tags"/>
+          <field name="origin_m2m_so" widget="my_many2many_tags" string="Quotation" attrs="{'invisible': ['|',('origin', '=', False), ('type','=','out_refund')]}"/>
+          <field name="origin_m2m_ai" widget="my_many2many_tags" string="Invoice" attrs="{'invisible': ['|',('origin', '=', False), ('type','!=','out_refund')]}"/>
         </xpath>
       </field>
     </record>
@@ -21,9 +19,8 @@
       <field name="priority" eval="20" />
       <field name="arch" type="xml">
         <xpath expr="//field[@name='origin']" position="after">
-          <!--
-          <field name="origin_m2o_po" string="Purchase Order" attrs="{'invisible': ['|',('origin', '=', False), ('type','=','in_refund')]}"/>
-          <field name="origin_m2o_ai" string="Vendor Bill" attrs="{'invisible': ['|',('origin', '=', False), ('type','!=','in_refund')]}"/> -->
+          <field name="origin_m2m_po"  widget="my_many2many_tags" string="Purchase Order" attrs="{'invisible': ['|',('origin', '=', False), ('type','=','in_refund')]}"/>
+          <field name="origin_m2m_ai"  widget="my_many2many_tags" string="Vendor Bill" attrs="{'invisible': ['|',('origin', '=', False), ('type','!=','in_refund')]}"/>
         </xpath>
       </field>
     </record>
