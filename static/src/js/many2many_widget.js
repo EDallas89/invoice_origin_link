@@ -17,17 +17,27 @@ odoo.define('invoice_origin_link.my_many2many_tags', function (require) {
                 e.stopPropagation();
                 var self = this;
                 var record_id = this.get_badge_id(e.target);
-                new dialogs.FormViewDialog(self, {
+                self.do_action({
+                    type: "ir.actions.act_window",
                     res_model: self.field.relation,
                     res_id: record_id,
-                    context: self.record.getContext(),
-                    title: _t('Open: ') + self.field.string,
-                    readonly: !self.attrs.can_write,
-                }).on('write_completed', self, function () {
-                    self.dataset.cache[record_id].from_read = {};
-                    self.dataset.evict_record(record_id);
-                    self.render_value();
-                }).open();
+                    views: [[false, "form"]],
+                    target: "target",
+                });
+                // To use popup windows
+
+                //new dialogs.FormViewDialog(self, {
+                //    type: "ir.actions.act_window",
+                //    res_model: self.field.relation,
+                //    res_id: record_id,
+                //    context: self.record.getContext(),
+                //    //title: _t('Open: ') + self.field.string,
+                //    readonly: !self.attrs.can_write,
+                //}).on('write_completed', self, function () {
+                //    self.dataset.cache[record_id].from_read = {};
+                //    self.dataset.evict_record(record_id);
+                //    self.render_value();
+                //}).open();
             }
         })
     });

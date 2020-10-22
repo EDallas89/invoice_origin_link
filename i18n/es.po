@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0-20200826\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-20 14:31+0000\n"
-"PO-Revision-Date: 2020-10-20 14:31+0000\n"
+"POT-Creation-Date: 2020-10-22 11:29+0000\n"
+"PO-Revision-Date: 2020-10-22 11:29+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,19 +22,19 @@ msgid "Invoice"
 msgstr "Factura"
 
 #. module: invoice_origin_link
-#: model:ir.model.fields,field_description:invoice_origin_link.field_account_invoice_origin_m2o_ai
-msgid "Origin M2O Ai"
-msgstr "Origin M2O Ai"
+#: model:ir.model.fields,field_description:invoice_origin_link.field_account_invoice_origin_m2m_ai
+msgid "Origin M2M Ai"
+msgstr "Origin M2M Ai"
 
 #. module: invoice_origin_link
-#: model:ir.model.fields,field_description:invoice_origin_link.field_account_invoice_origin_m2o_po
-msgid "Origin M2O Po"
-msgstr "Origin M2O Po"
+#: model:ir.model.fields,field_description:invoice_origin_link.field_account_invoice_origin_m2m_po
+msgid "Origin M2M Po"
+msgstr "Origin M2M Po"
 
 #. module: invoice_origin_link
-#: model:ir.model.fields,field_description:invoice_origin_link.field_account_invoice_origin_m2o_so
-msgid "Origin M2O So"
-msgstr "Origin M2O So"
+#: model:ir.model.fields,field_description:invoice_origin_link.field_account_invoice_origin_m2m_so
+msgid "Origin M2M So"
+msgstr "Origin M2M So"
 
 #. module: invoice_origin_link
 #: model:ir.ui.view,arch_db:invoice_origin_link.account_internal_notes_invoice_supplier_form
