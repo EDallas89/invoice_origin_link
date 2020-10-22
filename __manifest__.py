@@ -4,7 +4,7 @@
 
     'summary': """
         Add a link to invoice source document on invoice form view""",
-    'author': "Inma Sánchez",
+    'author': "Aresoltec Canarias S.L.",
     'website': "https://github.com/EDallas89",
     'category': 'Account',
     'version': '11.0',
