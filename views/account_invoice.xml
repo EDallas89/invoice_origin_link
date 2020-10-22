@@ -9,6 +9,7 @@
         <xpath expr="//page[@name='other_info']//field[@name='origin']" position="after">
           <field name="origin_m2o_so" string="Quotation" attrs="{'invisible': ['|',('origin', '=', False), ('type','=','out_refund')]}"/>
           <field name="origin_m2o_ai" string="Invoice" attrs="{'invisible': ['|',('origin', '=', False), ('type','!=','out_refund')]}"/>
+          <field name="origin_m2m" widget="my_many2many_tags"/>
         </xpath>
       </field>
     </record>

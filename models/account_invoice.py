@@ -20,6 +20,9 @@ class AccountInvoice(models.Model):
         compute='_compute_origin',
     )
 
+    origin_m2m = fields.Many2many(comodel_name='sale.order', string='Many2Many')
+    
+
     @api.one
     @api.depends('origin')
     def _compute_origin(self):
